@@ -4,7 +4,9 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 650px;
+  min-height: 997px;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -80,9 +82,11 @@ nav a:hover {
 }
 
 main {
-  min-height: 450px;
+  min-height: 900px;
   padding: 25px 32px;
   background-image: url(../images/shop-image.png);
+  background-size: cover;
+  background-position: center;
 }
 
 main h2 {
@@ -132,5 +136,4 @@ footer {
   color: white;
   text-align: center;
   padding: 32px;
-  position:static;
 }
