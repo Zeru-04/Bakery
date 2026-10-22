@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <title>Sweet Bakery</title>
+    <script src="../assets/js/cart.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-icon">
+                <img src="../assets/images/logo4.png" alt="Sweet Bakery Logo">
+            </div>
+            <span>Sweet Bakery</span>
+            <nav>
+                <a href="../Homepage/index.html">Home</a>
+                <a href="../Homepage/categories.html">Categories</a>
+                <a href="../Homepage/aboutus.html">About Us</a>
+                <a href="../Homepage/contact.html">Contact</a>
+                <a href="#" id="loginLink">Login</a>
+                <a href="../Homepage/cart.html" class="icon-cart" title="Cart">
+                    <img src="../assets/images/icon-cart.png" alt="Cart">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <h2>My Cart</h2>
+    <div id="cartItems"></div>
+    <template id="cartHeaderTemplate">
+        <div class="cart-row cart-header">
+            <span>Product</span>
+            <span>Price</span>
+            <span>Quantity</span>
+            <span>Total</span>
+            <span></span>
+        </div>
+    </template>
+    <template id="cartRowTemplate">
+        <div class="cart-row">
+            <span class="cart-product"></span>
+            <span class="cart-price"></span>
+            <span class="quantity-control">
+                <button class="quantity-btn decrease-quantity" type="button">−</button>
+                <span class="cart-quantity"></span>
+                <button class="quantity-btn increase-quantity" type="button">+</button>
+            </span>
+            <span class="cart-subtotal"></span>
+            <button class="remove-btn" type="button">Remove</button>
+        </div>
+    </template>
+    <h3 id="cartTotal"></h3>
+    <a href="categories.html" class="order-box">Continue Shopping</a>
+    <button class="order-box" onclick="checkout()">Proceed to Checkout</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sweet Bakery. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
+            <h2 id="modalTitle">Login</h2>
+            <form id="loginForm" novalidate>
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Email">
+                <small class="error" id="emailError"></small>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <small class="error" id="passwordError"></small>
+
+                <div id="confirmGroup" class="hidden">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-enter password">
+                    <small class="error" id="confirmError"></small>
+                </div>
+
+                <button type="submit" class="login-btn" id="submitBtn">Log In</button>
+                <p class="success" id="loginSuccess"></p>
+                <p class="switch-text">
+                    <span id="switchText">No account yet?</span>
+                    <a href="#" id="switchMode">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

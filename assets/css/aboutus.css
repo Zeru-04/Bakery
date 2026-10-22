@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #733911;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #D4A574;
+  padding: 16px 0;
+}
+
+.header-container {
+  width: auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #D4A574;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px black;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header-container span {
+  font-size: 35px;
+  font-weight: bold;
+  color: #8B4513;
+  margin-right: auto;
+  padding-left: 16px;
+}
+
+nav {
+  display: flex;
+  gap: 0px;
+}
+
+nav a {
+  color: #8B4513;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 15px;
+}
+
+nav a:hover {
+  background-color: #DEC2A4;
+  color: #8B4513;
+  transform: translateY(-2px);
+  border-radius: 5px;
+}
+
+.icon-cart {
+  display: flex;
+  align-items: center;
+}
+
+.icon-cart img {
+  width: 28px;
+  height: 28px;
+}
+
+main {
+  padding: 25px 32px;
+  background-color: white;
+}
+
+.about-container {
+  display: flex;
+  gap: 32px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.aboutus-left {
+  width: 55%;
+}
+
+.aboutus-left h1 {
+  text-align: center;
+  color: #8B4513;
+  margin-bottom: 16px;
+}
+
+.aboutus-text {
+  background-color: #DEC2A4;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.aboutus-text p, ul {
+  color: #8B4513;
+  margin-bottom: 5px;
+}
+
+.aboutus-right {
+  width: 45%;
+  text-align: center;
+}
+
+.aboutus-right h2 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.grid-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.staff-card {
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+  padding: 10px;
+  width: 140px;
+}
+
+.staff-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.staff-card p {
+  display: block;
+  margin-top: 8px;
+  color: #8B4513;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #733911;
+  color: white;
+  text-align: center;
+  padding: 32px;
+}

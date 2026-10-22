@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sweet Bakery</title>
+
+    <link rel="stylesheet" href="../assets/css/aboutus.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <script src="../assets/js/login.js" defer></script>
+</head>
+<body> 
+
+    <header>
+        <div class="header-container">
+            <div class="logo-icon">
+                <img src="../assets/images/logo4.png" alt="Sweet Bakery Logo">
+            </div>
+            <span>Sweet Bakery</span>
+            <nav>
+                <a href="../Homepage/index.html">Home</a>
+                <a href="../Homepage/categories.html">Categories</a>
+                <a href="../Homepage/aboutus.html">About Us</a>
+                <a href="../Homepage/contact.html">Contact</a>
+                <a href="#" id="loginLink">Login</a>
+                 <a href="../Homepage/cart.html" class="icon-cart" title="Cart">
+                    <img src="../assets/images/icon-cart.png" alt="Cart">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="about-container">
+
+            <div class="aboutus-left">
+                <div class="aboutus-text">
+                    <h1>About Us!</h1>
+                    <p>
+                        Our business is Sweet Bakery; we offer freshly baked and delicious
+                        treats made with quality ingredients. We provide a variety of breads,
+                        cakes, pastries, and other sweet treats at affordable prices. Our goal
+                        is to bring happiness to our customers through every delicious bite.
+                    </p>
+                </div>
+
+                <div class="aboutus-text">
+                    <h1>Achievements</h1>
+                    <ul>
+                        <li>Gained loyal and satisfied customers</li>
+                        <li>Highly Positive Feedback</li>
+                        <li>High Product Quality and Freshness</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="aboutus-right">
+                <h2>Persons In Charge</h2>
+
+                <div class="grid-info">
+                    <div class="staff-card">
+                        <img src="../assets/images/aureus.jpg" alt="Aureus">
+                        <p>Aureus</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="../assets/images/april.jpg" alt="Aguilar">
+                        <p>Aguilar</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="../assets/images/aj.jpg" alt="Alejandro">
+                        <p>Alejandro</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="../assets/images/gab.jpg" alt="Verterra">
+                        <p>Verterra</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="../assets/images/yuka.jpg" alt="Shimada">
+                        <p>Shimada</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sweet Bakery. All rights reserved.</p>
+    </footer>
+
+    <!-- Login popup (kailangan ito ng login.js) -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
+            <h2 id="modalTitle">Login</h2>
+            <form id="loginForm" novalidate>
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Email">
+                <small class="error" id="emailError"></small>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <small class="error" id="passwordError"></small>
+
+                <div id="confirmGroup" class="hidden">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-enter password">
+                    <small class="error" id="confirmError"></small>
+                </div>
+
+                <button type="submit" class="login-btn" id="submitBtn">Log In</button>
+                <p class="success" id="loginSuccess"></p>
+                <p class="switch-text">
+                    <span id="switchText">No account yet?</span>
+                    <a href="#" id="switchMode">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

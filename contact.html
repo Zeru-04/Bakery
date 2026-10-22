@@ -1,0 +1,160 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Sweet Bakery</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-icon">
+                <img src="../assets/images/logo4.png" alt="Sweet Bakery Logo">
+            </div>
+            <span>Sweet Bakery</span>
+            <nav>
+                <a href="../Homepage/index.html">Home</a>
+                <a href="../Homepage/categories.html">Categories</a>
+                <a href="../Homepage/aboutus.html">About Us</a>
+                <a href="../Homepage/contact.html">Contact</a>
+                <a href="#" id="loginLink">Login</a>
+                <a href="../Homepage/cart.html" class="icon-cart" title="Cart">
+                    <img src="../assets/images/icon-cart.png" alt="Cart">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="home-container">
+        <div class="home-content">
+            <h1>Freshly Baked Every Day</h1>
+            <h3>Hi there! Craving for sweets? Discover our artisanal breads and pastries made with love and the finest ingredients.</h3>
+            <button onclick="window.location.href='../Homepage/categories.html'">Order Now</button>
+        </div>
+        <div class="bread-image">
+            <img src="../assets/images/home-bread.jpg" alt="Fresh Bread">
+        </div>
+    </div>
+
+    <main>   
+        <center> <h2>Our Best Sellers</h2> </center>
+        <section class="best-sellers" id="categories">
+
+            <div class="product-card breadType">
+                <img src="../assets/images/spanish-bread.jpg" alt="spanish bread">
+                <h3>Spanish Bread</h3>
+                <p class="price">₱60</p>
+                <hr>
+                <p class="info">Spanish bread is a Filipino bakery favorite known for its soft texture and sweet buttery filling.</p>
+            </div>
+
+            <div class="product-card breadType">
+                <img src="../assets/images/ube-bread.jpg" alt="ube bread">
+                <h3>Ube Bread</h3>
+                <p class="price">₱90</p>
+                <hr>
+                <p class="info">Ube bread showcases the Filipino love for purple yam, a popular ingredient in local desserts.</p>
+            </div>
+
+            <div class="product-card pastryType">
+                <img src="../assets/images/ensaymada.jpg" alt="Ensaymada">
+                <h3>Ensaymada</h3>
+                <p class="price">₱90</p>
+                <hr>
+                <p class="info">This is a traditional Filipino pastry with a flaky, buttery texture and a sweet, milky flavor.</p>
+            </div>
+
+            <div class="product-card pastryType">
+                <img src="../assets/images/pastel-buns.JPG" alt="pastel buns">
+                <h3>Pastel Buns</h3>
+                <p class="price">₱160</p>
+                <hr>
+                <p class="info">Pastel buns are popular in the Philippines, especially in Camiguin, known for their filled molten yema.</p>
+            </div>
+
+            <div class="product-card cakeType">
+                <img src="../assets/images/Basque Cheesecake.jpg" alt="Basque Cheesecake">
+                <h3>Basque Cheesecake</h3>
+                <p class="price">₱700</p>
+                <hr>
+                <p class="info">This is a freshly sliced loaf of artisanal basque cheesecake, showing off a beautiful cross-section of its interior structure.</p>
+            </div>
+
+            <div class="product-card cakeType">
+                <img src="../assets/images/blackforest.jpg" alt="Black Forest Cake">
+                <h3>Black Forest Cake</h3>
+                <p class="price">₱650</p>
+                <hr>
+                <p class="info">This is a delicious Black Forest cake, layered with cherries and whipped cream.</p>
+            </div>
+
+            <div class="product-card pastryType">
+                <img src="../assets/images/sans-rival.jpg" alt="sans rival">
+                <h3>Sans Rival Cookie</h3>
+                <p class="price">₱60</p>
+                <hr>
+                <p class="info">Influenced by French buttercream techniques, Sans Rival Cookie is made of cashew meringue and French buttercream.</p>
+            </div>
+        </section> 
+
+        <div class="history">
+            <img src="../assets/images/shop-image.png" alt="Sweet Bakery Shop"> 
+            <div class="shop-text">
+                <h2>Our Shop Story</h2>
+                <p>Come and read our sweetness history!</p>
+            </div>
+        </div>
+
+
+
+        <div class="history-text">
+            <h2>The Story of Sweet Bakery</h2>
+            <p>Sweet Bakery was founded with a simple dream: to bring freshly baked, delicious, and affordable breads, pastries, and cakes to every Filipino. As a new bakery, we are excited to share our passion for baking by offering a variety of treats made with care and quality ingredients.
+
+                Although Sweet Bakery is just beginning its journey, we are committed to creating a welcoming place where customers can enjoy their favorite baked goods. From classic Filipino breads like pandesal and ensaymada to delightful pastries and beautifully made cakes, we aim to bring sweetness to every occasion.
+
+                At Sweet Bakery, every product is prepared with love and dedication. We look forward to growing with our customers, earning their trust, and becoming a favorite neighborhood bakery.
+
+                Sweet Bakery – Freshly Baked, Made with Love!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sweet Bakery. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
+            <h2 id="modalTitle">Login</h2>
+            <form id="loginForm" novalidate>
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Email">
+                <small class="error" id="emailError"></small>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <small class="error" id="passwordError"></small>
+
+                <div id="confirmGroup" class="hidden">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-enter password">
+                    <small class="error" id="confirmError"></small>
+                </div>
+
+                <button type="submit" class="login-btn" id="submitBtn">Log In</button>
+                <p class="success" id="loginSuccess"></p>
+                <p class="switch-text">
+                    <span id="switchText">No account yet?</span>
+                    <a href="#" id="switchMode">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
