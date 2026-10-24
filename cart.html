@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="assets/css/login.css">
     <title>Sweet Bakery</title>
     <script src="assets/js/cart.js" defer></script>
+    <script src="assets/js/login.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="header-container">
             <div class="logo-icon">
-                <img src="assets/images/logo4.png" alt="Sweet Bakery Logo">
+                <img src="../assets/images/logo4.png" alt="Sweet Bakery Logo">
             </div>
             <span>Sweet Bakery</span>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contact.html">Contact</a>
+                <a href="../Homepage/index.html">Home</a>
+                <a href="../Homepage/categories.html">Categories</a>
+                <a href="../Homepage/aboutus.html">About Us</a>
+                <a href="../Homepage/contact.html">Contact</a>
                 <a href="#" id="loginLink">Login</a>
-                <a href="cart.html" class="icon-cart" title="Cart">
-                    <img src="assets/images/icon-cart.png" alt="Cart">
+                <a href="../Homepage/cart.html" class="icon-cart" title="Cart">
+                    <img src="../assets/images/icon-cart.png" alt="Cart">
                 </a>
             </nav>
         </div>
@@ -36,8 +37,8 @@
         <div class="cart-row cart-header">
             <span>Product</span>
             <span>Price</span>
-            <span>Quantity</span>
-            <span>Total</span>
+            <span class="cart-quantity-column">Quantity</span>
+            <span class="cart-total-column">Total</span>
             <span></span>
         </div>
     </template>
@@ -45,23 +46,64 @@
         <div class="cart-row">
             <span class="cart-product"></span>
             <span class="cart-price"></span>
-            <span class="quantity-control">
+            <span class="quantity-control cart-quantity-column">
                 <button class="quantity-btn decrease-quantity" type="button">−</button>
                 <span class="cart-quantity"></span>
                 <button class="quantity-btn increase-quantity" type="button">+</button>
             </span>
-            <span class="cart-subtotal"></span>
+            <span class="cart-subtotal cart-total-column"></span>
             <button class="remove-btn" type="button">Remove</button>
         </div>
     </template>
     <h3 id="cartTotal"></h3>
     <a href="categories.html" class="order-box">Continue Shopping</a>
-    <button class="order-box" onclick="checkout()">Proceed to Checkout</button>
+    <button class="order-box" onclick="openCheckout()">Proceed to Checkout</button>
     </main>
 
     <footer>
         <p>&copy; 2026 Sweet Bakery. All rights reserved.</p>
     </footer>
+
+    <div class="checkout-overlay" id="checkoutModal">
+        <div class="checkout-box">
+            <h2>Checkout</h2>
+
+            <label for="discountType">Discount</label>
+            <select id="discountType" onchange="updateCheckout()">
+                <option value="0">None</option>
+                <option value="0.20">Senior / PWD (20%)</option>
+                <option value="0.10">Student (10%)</option>
+            </select>
+
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" onchange="changePayment()">
+                <option value="Cash">Cash</option>
+                <option value="GCash">GCash</option>
+                <option value="Credit Card">Credit Card</option>
+            </select>
+
+            <div id="numberGroup" style="display: none;">
+                <label for="paymentNumber" id="numberLabel">Mobile Number</label>
+                <input type="text" id="paymentNumber" placeholder="09XXXXXXXXX" maxlength="11">
+            </div>
+
+            <div class="summary-line"><span>Subtotal:</span> <span id="sumSubtotal">₱0.00</span></div>
+            <div class="summary-line"><span>Discount:</span> <span id="sumDiscount">-₱0.00</span></div>
+            <div class="summary-line"><span>Tax (12%):</span> <span id="sumTax">₱0.00</span></div>
+            <div class="summary-line total-line"><span>Total:</span> <span id="sumTotal">₱0.00</span></div>
+
+            <label for="amountPaid">Amount Paid</label>
+            <input type="number" id="amountPaid" min="0" step="0.01" oninput="updateCheckout()">
+
+            <div class="summary-line"><span>Change:</span> <span id="sumChange">₱0.00</span></div>
+            <p class="checkout-error" id="checkoutError"></p>
+
+            <div class="checkout-buttons">
+                <button type="button" class="order-box" onclick="closeCheckout()">Cancel</button>
+                <button type="button" class="order-box" onclick="confirmPayment()">Pay Now</button>
+            </div>
+        </div>
+    </div>
 
     <div class="modal-overlay" id="loginModal">
         <div class="modal-box">
