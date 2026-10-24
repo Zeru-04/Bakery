@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Bakery</title>
-    <link rel="stylesheet" href="assets/css/categories.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/categories.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 
-    <script src="assets/js/login.js" defer></script>
-    <script src="assets/js/category.js" defer></script>
+    <script src="../assets/js/login.js" defer></script>
+    <script src="../assets/js/category.js" defer></script>
 
 </head>
 <body>
     <header>
         <div class="header-container">
                 <div class="logo-icon">
-                    <img src="assets/images/logo4.png" alt="Sweet Bakery Logo">
+                    <img src="../assets/images/logo4.png" alt="Sweet Bakery Logo">
                 </div>
                 <span>Sweet Bakery</span>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contact.html">Contact</a>
+                <a href="../Homepage/index.html">Home</a>
+                <a href="../Homepage/categories.html">Categories</a>
+                <a href="../Homepage/aboutus.html">About Us</a>
+                <a href="../Homepage/contact.html">Contact</a>
                 <a href="#" id="loginLink">Login</a>
-                <a href="cart.html" class="icon-cart" title="Cart">
-                    <img src="assets/images/icon-cart.png" alt="Cart">
+                <a href="../Homepage/cart.html" class="icon-cart" title="Cart">
+                    <img src="../assets/images/icon-cart.png" alt="Cart">
                 </a>
             </nav>
         </div>
@@ -34,8 +34,7 @@
     <main>
         <div class="categories-title">
             <h1>All Categories</h1>
-            <p>Explore our wide range of delicious baked goods, from freshly baked breads to 
-            decadent cakes and pastries. Find your favorite treats and satisfy your cravings!</p>
+            <p>Explore our wide range of delicious treats, from freshly baked breads to decadent cakes, pastries, and refreshing drinks. Find your favorite delights and satisfy your cravings!</p>
         </div>
 
         <div class="category-buttons">
@@ -43,6 +42,7 @@
             <button class="breadFilter">Breads</button>
             <button class="cakeFilter">Cakes</button>
             <button class="pastryFilter">Pastries</button>
+            <button class="drinksFilter">Drinks</button>
         </div>
 
         <div class="categories-container">
@@ -52,7 +52,7 @@
                 <h2>Breads</h2>
                 <section class="products">
                     <div class="product-card breadType">
-                        <img src="assets/images/pandesal.jpg" alt="pandesal">
+                        <img src="../assets/images/pandesal.jpg" alt="pandesal">
                         <h3>Pandesal</h3>
                         <p class="price">₱25</p>
                         <hr>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/loafbread.jpg" alt="loafbread">
+                        <img src="../assets/images/loafbread.jpg" alt="loafbread">
                         <h3>Loaf Bread</h3>
                         <p class="price">₱120</p>
                         <hr>
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/spanish-bread.jpg" alt="spanish bread">
+                        <img src="../assets/images/spanish-bread.jpg" alt="spanish bread">
                         <h3>Spanish Bread</h3>
                         <p class="price">₱60</p>
                         <hr>
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/monay.jpg" alt="monay">
+                        <img src="../assets/images/monay.jpg" alt="monay">
                         <h3>Monay</h3>
                         <p class="price">₱50</p>
                         <hr>
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/pan-de-coco.jpg" alt="pan de coco">
+                        <img src="../assets/images/pan-de-coco.jpg" alt="pan de coco">
                         <h3>Pan De Coco</h3>
                         <p class="price">₱60</p>
                         <hr>
@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/ube-bread.jpg" alt="ube bread">
+                        <img src="../assets/images/ube-bread.jpg" alt="ube bread">
                         <h3>Ube Bread</h3>
                         <p class="price">₱90</p>
                         <hr>
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/cheese-bread.jpg" alt="cheese bread">
+                        <img src="../assets/images/cheese-bread.jpg" alt="cheese bread">
                         <h3>Cheese Bread</h3>
                         <p class="price">₱70</p>
                         <hr>
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="product-card breadType">
-                        <img src="assets/images/putok-bread.jpg" alt="putok bread">
+                        <img src="../assets/images/putok-bread.jpg" alt="putok bread">
                         <h3>Putok Bread</h3>
                         <p class="price">₱50</p>
                         <hr>
@@ -123,7 +123,41 @@
                         <button class="order-box" onclick="addToCart('Putok Bread', 50)">Order</button>
                     </div>
 
+                    <div class="product-card breadType">
+                        <img src="../assets/images/toasted-siopao.jpg" alt="toasted siopao">
+                        <h3>Toasted Siopao</h3>
+                        <p class="price">₱25</p>
+                        <hr>
+                        <p class="info">A delicious Filipino bread filled with savory meat filling, featuring a soft inside and a lightly toasted golden crust.</p>
+                        <button class="order-box" onclick="addToCart('Toasted Siopao', 25)">Order</button>
+                    </div>
 
+                    <div class="product-card breadType">
+                        <img src="../assets/images/seniorita.jpg" alt="señorita bread">
+                        <h3>Señorita</h3>
+                        <p class="price">₱25</p>
+                        <hr>
+                        <p class="info">A sweet Filipino bread with a soft, flaky texture, coated with breadcrumbs and filled with a delicious sweet filling.</p>
+                        <button class="order-box" onclick="addToCart('Señorita Bread', 25)">Order</button>
+                    </div>
+
+                    <div class="product-card breadType">
+                        <img src="../assets/images/kababayan.jpg" alt="señorita bread">
+                        <h3>Kababayan</h3>
+                        <p class="price">₱10</p>
+                        <hr>
+                        <p class="info">A soft, golden-yellow Filipino bread with a slightly sweet, buttery flavor and a unique bell-shaped appearance.</p>
+                        <button class="order-box" onclick="addToCart('Kababayan Bread', 10)">Order</button>
+                    </div>
+
+                    <div class="product-card breadType">
+                        <img src="../assets/images/banana-loaf.jpg" alt="banana loaf bread">
+                        <h3>Banana Loaf</h3>
+                        <p class="price">₱110</p>
+                        <hr>
+                        <p class="info">A moist and tender loaf with a naturally sweet banana flavor and a golden-brown crust. Perfect as a delicious snack or a delightful treat with your favorite drink.</p>
+                        <button class="order-box" onclick="addToCart('Banana Loaf Bread', 110)">Order</button>
+                    </div>
                 </section>
             </div>
 
@@ -132,7 +166,7 @@
                 <h2>Cakes</h2>
                 <section class="products">
                     <div class="product-card cakeType">
-                        <img src="assets/images/vanilla-cake.jpg" alt="Vanilla Cake">
+                        <img src="../assets/images/vanilla-cake.jpg" alt="Vanilla Cake">
                         <h3>Vanilla Cake</h3>
                         <p class="price">₱500</p>
                         <hr>
@@ -141,8 +175,8 @@
                     </div>
 
                     <div class="product-card cakeType">
-                        <img src="assets/images/blackforest.jpg" alt="Black Forest Cake">
-                        <h3>Black Forest Cake</h3>
+                        <img src="../assets/images/blackforest.jpg" alt="Black Forest Cake">
+                        <h3>Black Forest</h3>
                         <p class="price">₱650</p>
                         <hr>
                         <p class="info">This is a delicious Black Forest cake, layered with cherries and whipped cream.</p>
@@ -150,7 +184,7 @@
                     </div>
 
                     <div class="product-card cakeType">
-                        <img src="assets/images/Basque Cheesecake.jpg" alt="Basque Cheesecake">
+                        <img src="../assets/images/Basque Cheesecake.jpg" alt="Basque Cheesecake">
                         <h3>Basque Cheesecake</h3>
                         <p class="price">₱700</p>
                         <hr>
@@ -159,12 +193,84 @@
                     </div>
 
                     <div class="product-card cakeType">
-                        <img src="assets/images/redvelvet.jpg" alt="Red Velvet Cake">
-                        <h3>Red Velvet Cake</h3>
+                        <img src="../assets/images/redvelvet.jpg" alt="Red Velvet Cake">
+                        <h3>Red Velvet </h3>
                         <p class="price">₱750</p>
                         <hr>
                         <p class="info">This is a moist and flavorful Red Velvet cake, perfect for any celebration.</p>
                         <button class="order-box" onclick="addToCart('Red Velvet Cake', 750)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/brazo.jpg" alt="Brazo de Mercedes">
+                        <h3>Brazo de Mercedes</h3>
+                        <p class="price">₱500</p>
+                        <hr>
+                        <p class="info">Soft meringue roll filled with rich, creamy custard. Light, sweet, and melt in your mouth good.</p>
+                        <button class="order-box" onclick="addToCart('Brazo de Mercedes', 500)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/yema-cake.jpg" alt="Brazo de Mercedes">
+                        <h3>Yema Cake</h3>
+                        <p class="price">₱650</p>
+                        <hr>
+                        <p class="info">Soft, airy chiffon cake covered in luscious yema custard frosting. Buttery, indulgent, and unmistakably Filipino.</p>
+                        <button class="order-box" onclick="addToCart('Yema Cake', 650)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/pistachio.jpg" alt="pistachio cheesecake">
+                        <h3>Pistachio Cheesecake</h3>
+                        <p class="price">₱1,480</p>
+                        <hr>
+                        <p class="info">A delightful mix of nutty and tangy flavors, with real pistachios folded into the creamy cheesecake and sprinkled on top.</p>
+                        <button class="order-box" onclick="addToCart('Pistachio Cheesecake', 1480)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/ube-custard-cake.jpg" alt="ube custard cake">
+                        <h3>Ube Custard Cake</h3>
+                        <p class="price">₱1,170</p>
+                        <hr>
+                        <p class="info">Fluffy ube chiffon layered with smooth leche flan and caramel for a rich, classic Filipino custard dessert.</p>
+                        <button class="order-box" onclick="addToCart('Ube Custard Cake', 1170)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/mango-cake.jpg" alt="ube custard cake">
+                        <h3>Mango Graham Cake</h3>
+                        <p class="price">₱1,250</p>
+                        <hr>
+                        <p class="info">Layers of sweet, ripe mango and creamy whipped cream between crisp, buttery graham. Cool, fruity, and refreshingly Filipino.</p>
+                        <button class="order-box" onclick="addToCart('Mango Graham Cake', 1250)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/sans-rival-cake.jpg" alt="sans rival cake">
+                        <h3>Sans Rival Cake</h3>
+                        <p class="price">₱1,380</p>
+                        <hr>
+                        <p class="info">Sweet, light, and refreshing dessert featuring a soft, moist sponge or butter cake base infused or layered with strawberries.</p>
+                        <button class="order-box" onclick="addToCart('Sans Rival Cake', 1380)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/strawberry-cake.jpg" alt="strawberry cake">
+                        <h3>Strawberry Cake</h3>
+                        <p class="price">₱1,280</p>
+                        <hr>
+                        <p class="info">Sweet, light, and refreshing dessert featuring a soft, moist sponge or butter cake base infused or layered with strawberries.</p>
+                        <button class="order-box" onclick="addToCart('Strawberry Cake', 1280)">Order</button>
+                    </div>
+
+                    <div class="product-card cakeType">
+                        <img src="../assets/images/tiramisu-cake.jpg" alt="strawberry cake">
+                        <h3>Tiramisu Cake</h3>
+                        <p class="price">₱1,480</p>
+                        <hr>
+                        <p class="info">Soft sponge layers soaked in rich coffee, filled with smooth mascarpone cream, and dusted with cocoa. Bold, creamy, and irresistibly indulgent.</p>
+                        <button class="order-box" onclick="addToCart('Tiramisu Cake', 1480)">Order</button>
                     </div>
                 </section>
             </div>
@@ -174,7 +280,7 @@
                 <h2>Pastries</h2>
                 <section class="products">
                     <div class="product-card pastryType">
-                        <img src="assets/images/sans-rival.jpg" alt="sans rival">
+                        <img src="../assets/images/sans-rival.jpg" alt="sans rival">
                         <h3>Sans Rival Cookie</h3>
                         <p class="price">₱60</p>
                         <hr>
@@ -183,7 +289,7 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/ensaymada.jpg" alt="Ensaymada">
+                        <img src="../assets/images/ensaymada.jpg" alt="Ensaymada">
                         <h3>Ensaymada</h3>
                         <p class="price">₱90</p>
                         <hr>
@@ -192,7 +298,7 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/bukopie.jpg" alt="Bukopie">
+                        <img src="../assets/images/bukopie.jpg" alt="Bukopie">
                         <h3>Buko Pie</h3>
                         <p class="price">₱130</p>
                         <hr>
@@ -201,7 +307,7 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/hopia.jpg" alt="hopia">
+                        <img src="../assets/images/hopia.jpg" alt="hopia">
                         <h3>Monggo Hopia </h3>
                         <p class="price">₱50</p>
                         <hr>
@@ -210,7 +316,7 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/empanada.jpg" alt="empanada">
+                        <img src="../assets/images/empanada.jpg" alt="empanada">
                         <h3>Emapanada</h3>
                         <p class="price">₱135</p>
                         <hr>
@@ -219,16 +325,16 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/piyaya.jpg" alt="empanada">
+                        <img src="../assets/images/piyaya.jpg" alt="empanada">
                         <h3>Piaya</h3>
-                        <p class="price">₱135</p>
+                        <p class="price">₱80</p>
                         <hr>
                         <p class="info">Piaya is also spelled "Piyaya". Originated in Negros Occidental, Philippines, and is a flat pastry filled with muscovado sugar.</p>
-                        <button class="order-box" onclick="addToCart('Emapanada', 135)">Order</button>
+                        <button class="order-box" onclick="addToCart('Emapanada', 80)">Order</button>
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/pastel-buns.JPG" alt="pastel buns">
+                        <img src="../assets/images/pastel-buns.JPG" alt="pastel buns">
                         <h3>Pastel Buns</h3>
                         <p class="price">₱160</p>
                         <hr>
@@ -237,17 +343,165 @@
                     </div>
 
                     <div class="product-card pastryType">
-                        <img src="assets/images/egg-pie.jpg" alt="egg pie">
+                        <img src="../assets/images/egg-pie.jpg" alt="egg pie">
                         <h3>Egg Pie</h3>
                         <p class="price">₱120</p>
                         <hr>
                         <p class="info">Egg pie became a popular Filipino bakery pastry, known for its flaky crust and creamy egg custard filling.</p>
                         <button class="order-box" onclick="addToCart('Egg Pie', 120)">Order</button>
                     </div>
+
+                    <div class="product-card pastryType">
+                        <img src="../assets/images/macaroon.jpg" alt="macaroon">
+                        <h3>Mini Coconut Macaroon</h3>
+                        <p class="price">₱40</p>
+                        <hr>
+                        <p class="info">A sweet and chewy treat made with shredded coconut, featuring a soft, moist center and a lightly golden exterior.</p>
+                        <button class="order-box" onclick="addToCart('Mini Coconut Macaroon', 40)">Order</button>
+                    </div>
+
+                    <div class="product-card pastryType">
+                        <img src="../assets/images/cinnamon.jpg" alt="cinnamon roll">
+                        <h3>Cinnamon Roll</h3>
+                        <p class="price">₱120</p>
+                        <hr>
+                        <p class="info">A soft and fluffy sweet roll filled with a fragrant cinnamon-sugar mixture, baked until golden brown and topped with a smooth, sweet glaze.</p>
+                        <button class="order-box" onclick="addToCart('Cinnamon Roll', 120)">Order</button>
+                    </div>
+
+                    <div class="product-card pastryType">
+                        <img src="../assets/images/egg tart.jpg" alt="egg tart">
+                        <h3>Egg tart</h3>
+                        <p class="price">₱80</p>
+                        <hr>
+                        <p class="info">A golden, flaky tart shell filled with smooth, creamy egg custard. </p>
+                        <button class="order-box" onclick="addToCart('Cinnamon Roll', 80)">Order</button>
+                    </div>
+
+                     <div class="product-card pastryType">
+                        <img src="../assets/images/cream-puffs.jpg" alt="cream puffs">
+                        <h3>Cream Puff</h3>
+                        <p class="price">₱130</p>
+                        <hr>
+                        <p class="info">A light, airy choux pastry filled with rich, smooth cream. Soft on the outside, sweet and creamy on the inside.</p>
+                        <button class="order-box" onclick="addToCart('Cream Puff', 130)">Order</button>
+                    </div>
                 </section>
             </div>
+                <div class="category-group" data-category="drinks">
+                    <hr>
+                    <h2>Drinks</h2>
+                    <section class="products">
 
-        </div>
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/tea.jpg" alt="hot tea">
+                            <h3>Tea</h3>
+                            <p class="price">₱120</p>
+                            <hr>
+                            <p class="info">Warm, soothing cup of freshly steeped tea. Light, fragrant, and gently comforting.</p>
+                            <button class="order-box" onclick="addToCart('Hot Tea', 120)">Order</button>
+                        </div>
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/dalgona.png" alt="dalgona coffee">
+                            <h3>Dalgona Coffee</h3>
+                            <p class="price">₱120</p>
+                            <hr>
+                            <p class="info">Creamy, whipped coffee foam served over cold or hot milk. Sweet, rich, and velvety, with a bold coffee flavor in every sip.</p>
+                            <button class="order-box" onclick="addToCart('Dalgona Coffee', 120)">Order</button>
+                        </div>
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/spanish-latte.jpg" alt="spanish latte">
+                            <h3>Spanish Latte</h3>
+                            <p class="price">₱170</p>
+                            <hr>
+                            <p class="info">A smooth espresso with steamed milk and a touch of sweetened condensed milk. Creamy, rich, and gently sweet, with a velvety finish. </p>
+                            <button class="order-box" onclick="addToCart('Spanish Latte', 170)">Order</button>
+                        </div>
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/matcha-latte.jpg" alt="matcha latte">
+                            <h3>Matcha Latte</h3>
+                            <p class="price">₱180</p>
+                            <hr>
+                            <p class="info">Smooth, earthy matcha whisked with creamy steamed milk. Lightly sweet with a fresh, mellow flavor and a vibrant green color.</p>
+                            <button class="order-box" onclick="addToCart('Matcha Latte', 180)">Order</button>
+                       </div>
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/strawberry-soda.jpg" alt="strawberry fruit soda">
+                            <h3>Strawberry Fruit Soda</h3>
+                            <p class="price">₱150</p>
+                            <hr>
+                            <p class="info">Sparkling soda mixed with sweet strawberry syrup and real fruit flavor bubbly, fruity, and ice cold.</p>
+                            <button class="order-box" onclick="addToCart('Strawberry Fruit Soda', 150)">Order</button>
+                        </div>
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/blue-soda.jpg" alt="blue lemonade fruit soda">
+                            <h3>Blue Lemonade Fruit Soda</h3>
+                            <p class="price">₱150</p>
+                            <hr>
+                            <p class="info">Sparkling soda mixed with tangy lemon and sweet blue syrup.</p>
+                            <button class="order-box" onclick="addToCart('Blue Lemonade Soda', 150)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/americano.jpg" alt="americano coffee">
+                            <h3>Americano</h3>
+                            <p class="price">₱100</p>
+                            <hr>
+                            <p class="info">Smooth cup of espresso mixed with hot water. Rich in flavor, clean and slightly bitter, with a lasting aroma.</p>
+                            <button class="order-box" onclick="addToCart('Americano', 100)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/hot-choco.jpg" alt="hot chocolate">
+                            <h3>Hot Chocolate</h3>
+                            <p class="price">₱170</p>
+                            <hr>
+                            <p class="info">A rich and creamy chocolate drink topped with fluffy marshmallows and chocolate shavings. Perfectly sweet and comforting.</p>
+                            <button class="order-box" onclick="addToCart('Hot Chocolate', 170)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/strawberry-matcha.jpg" alt="strawberry matcha">
+                            <h3>Strawberry Matcha</h3>
+                            <p class="price">₱200</p>
+                            <hr>
+                            <p class="info">A refreshing drink that combines the earthy taste of matcha green tea with the sweet, fruity flavor of strawberries and creamy milk.</p>
+                            <button class="order-box" onclick="addToCart('Strawberry Matcha', 200)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/vanilla-milkshake.jpg" alt="vanilla milkshake">
+                            <h3>Vanilla Milkshake</h3>
+                            <p class="price">₱160</p>
+                            <hr>
+                            <p class="info">A smooth, creamy, and milky drink with a sweet vanilla flavor. Made with a blend of vanilla ice cream, fresh milk, and vanilla syrup. </p>
+                            <button class="order-box" onclick="addToCart('Vanilla Milkshake', 160)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/choco-milkshake.jpg" alt="choco milkshake">
+                            <h3>Chocolate Milkshake</h3>
+                            <p class="price">₱160</p>
+                            <hr>
+                            <p class="info">A thick, creamy drink with a rich chocolate flavor and a sweet, milky taste. Made with a blend of chocolate ice cream, fresh milk, and chocolate syrup. </p>
+                            <button class="order-box" onclick="addToCart('hocolate Milkshake', 160)">Order</button>
+                        </div> 
+
+                        <div class="product-card drinksType">
+                            <img src="../assets/images/mango-milkshake.jpg" alt="mango milkshake">
+                            <h3>Mango Milkshake</h3>
+                            <p class="price">₱160</p>
+                            <hr>
+                            <p class="info">A creamy and refreshing drink made with sweet, ripe mangoes blended with milk and ice.</p>
+                            <button class="order-box" onclick="addToCart('Mango Milkshake', 160)">Order</button>
+                        </div> 
+                    </section>
+                </div>
     </main>
 
     <div class="modal-overlay" id="loginModal">
