@@ -1,6 +1,11 @@
 const TAX_RATE = 0.12;
 
 function addToCart(name, price) {
+    if (localStorage.getItem("loggedIn") != "true") {
+        alert("Please log in or sign up first before ordering.");
+        return;
+    }
+
     let quantity = localStorage.getItem("cart_" + name);
 
     if (quantity == null) {
@@ -116,13 +121,24 @@ function calculateTotals() {
 }
 
 function openCheckout() {
+    // The user must be logged in
+    if (localStorage.getItem("loggedIn") != "true") {
+        alert("Please log in or sign up first before checking out.");
+        return;
+    }
+
+    // The cart must not be empty
     if (getSubtotal() === 0) {
         alert("Your cart is empty.");
         return;
     }
+
+    // Clear the form
     document.getElementById("amountPaid").value = "";
     document.getElementById("paymentNumber").value = "";
     document.getElementById("checkoutError").textContent = "";
+
+    // Show the checkout popup (this was the missing part)
     document.getElementById("checkoutModal").classList.add("show");
     updateCheckout();
 }
