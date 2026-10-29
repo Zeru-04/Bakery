@@ -15,10 +15,16 @@ let submitBtn = document.getElementById('submitBtn');
 let switchText = document.getElementById('switchText');
 let switchMode = document.getElementById('switchMode');
 
-let savedEmail = '';
-let savedPassword = '';
-let loggedIn = false;
+
+let savedEmail = localStorage.getItem('savedEmail') || '';
+let savedPassword = localStorage.getItem('savedPassword') || '';
+let loggedIn = localStorage.getItem('loggedIn') === 'true';
 let mode = 'login';
+
+
+if (loggedIn === true) {
+  loginLink.textContent = 'Logout ' + localStorage.getItem('userName');
+}
 
 function clearMessages() {
   emailError.textContent = '';
@@ -58,6 +64,7 @@ loginLink.addEventListener('click', function (e) {
   e.preventDefault();
   if (loggedIn === true) {
     loggedIn = false;
+    localStorage.setItem('loggedIn', 'false');   
     loginLink.textContent = 'Login';
   } else {
     showLoginMode();
@@ -115,6 +122,8 @@ form.addEventListener('submit', function (e) {
     if (mode === 'signup') {
       savedEmail = email;
       savedPassword = password;
+      localStorage.setItem('savedEmail', email);          
+      localStorage.setItem('savedPassword', password);    
       showLoginMode();
       successMsg.textContent = 'Account created! You can now log in.';
     } else {
@@ -122,13 +131,15 @@ form.addEventListener('submit', function (e) {
         emailError.textContent = 'No account found. Please sign up first.';
       } else if (password !== savedPassword) {
         passwordError.textContent = 'Incorrect password.';
-} else {
-  loggedIn = true;
-  successMsg.textContent = 'Login successful!';
-  let name = email.split('@')[0];
-  loginLink.textContent = 'Logout ' + name ;
-  setTimeout(closePopup, 1200);
-}
+      } else {
+        loggedIn = true;
+        successMsg.textContent = 'Login successful!';
+        let name = email.split('@')[0];
+        loginLink.textContent = 'Logout ' + name;
+        localStorage.setItem('loggedIn', 'true');         
+        localStorage.setItem('userName', name);           
+        setTimeout(closePopup, 1200);
+      }
     }
   }
-}); 
+});
