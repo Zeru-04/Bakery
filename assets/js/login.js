@@ -23,7 +23,7 @@ let mode = 'login';
 
 
 if (loggedIn === true) {
-  loginLink.textContent = 'Logout ' + localStorage.getItem('userName');
+  loginLink.textContent = 'Logout';          
 }
 
 function clearMessages() {
@@ -63,9 +63,15 @@ function closePopup() {
 loginLink.addEventListener('click', function (e) {
   e.preventDefault();
   if (loggedIn === true) {
-    loggedIn = false;
-    localStorage.setItem('loggedIn', 'false');   
-    loginLink.textContent = 'Login';
+    
+    let userName = localStorage.getItem('userName');
+    let sure = confirm('The account ' + userName + ' is logging out.');
+
+    if (sure === true) {
+      loggedIn = false;
+      localStorage.setItem('loggedIn', 'false');
+      loginLink.textContent = 'Login';
+    }
   } else {
     showLoginMode();
     popup.style.display = 'flex';
@@ -91,7 +97,7 @@ form.addEventListener('submit', function (e) {
 
   let email = emailInput.value.trim();
   let password = passwordInput.value;
-  let confirm = confirmInput.value;
+  let confirmPass = confirmInput.value;
   let ok = true;
 
   if (email === '') {
@@ -113,7 +119,7 @@ form.addEventListener('submit', function (e) {
     ok = false;
   }
 
-  if (mode === 'signup' && ok === true && password !== confirm) {
+  if (mode === 'signup' && ok === true && password !== confirmPass) {
     confirmError.textContent = 'Passwords do not match.';
     ok = false;
   }
@@ -122,8 +128,8 @@ form.addEventListener('submit', function (e) {
     if (mode === 'signup') {
       savedEmail = email;
       savedPassword = password;
-      localStorage.setItem('savedEmail', email);          
-      localStorage.setItem('savedPassword', password);    
+      localStorage.setItem('savedEmail', email);
+      localStorage.setItem('savedPassword', password);
       showLoginMode();
       successMsg.textContent = 'Account created! You can now log in.';
     } else {
@@ -135,9 +141,9 @@ form.addEventListener('submit', function (e) {
         loggedIn = true;
         successMsg.textContent = 'Login successful!';
         let name = email.split('@')[0];
-        loginLink.textContent = 'Logout ' + name;
-        localStorage.setItem('loggedIn', 'true');         
-        localStorage.setItem('userName', name);           
+        loginLink.textContent = 'Logout';    
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('userName', name);   
         setTimeout(closePopup, 1200);
       }
     }
